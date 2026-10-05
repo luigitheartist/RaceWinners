@@ -42,5 +42,69 @@ public class Program
 
         // YOUR TURN: Rank each group from first to last place.
         // Decide what "fair" means before you start writing code!
+        int a = 0, b = 0, c = 0, d = 0;
+        for (int i = 0; i < 4; i++)
+        {
+            if (i == 0)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    a += groups[i].Ranks[j];
+                }
+            }
+
+            if (i == 1)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    b += groups[i].Ranks[j];
+                }
+            }
+
+            if (i == 2)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    c += groups[i].Ranks[j];
+                }
+            }
+
+            if (i == 3)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    d += groups[i].Ranks[j];
+                }
+            }
+        }
+
+        int[] rankVal = { a, b, c, d };
+        int[] itemp = { a, b, c, d };
+        string[] classes = { "Class A", "Class B", "Class C", "Class D" };
+        rankVal.Sort();
+        string[] classRanking = { "a", "b", "c", "d" };
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 4; j++)
+            {
+                if (itemp[i] == rankVal[j])
+                    classRanking[i] = classes[j];
+            }
+            
+        }
+
+        Console.WriteLine("\n\n - CLASS RANKINGS - ");
+        for (int i = 0; i < 4; i++)
+        {
+            Console.WriteLine($"P{i+1}:\t    {classRanking[i]}");
+        }
+        
+        
+        
+           
+
+
+
+
     }
 }
