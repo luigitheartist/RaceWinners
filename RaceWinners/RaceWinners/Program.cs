@@ -93,10 +93,10 @@ public class Program
             
         }
 
-        Console.WriteLine("\n\n - CLASS RANKINGS - ");
+        Console.WriteLine("\n\n      - CLASS RANKINGS - ");
         for (int i = 0; i < 4; i++)
         {
-            Console.WriteLine($"P{i+1}:\t    {classRanking[i]}");
+            Console.WriteLine($"P{i+1}: {classRanking[i]} ({rankVal[i]} pts for top 7)");
         }
         
         
