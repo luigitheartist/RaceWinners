@@ -42,6 +42,9 @@ public class Program
 
         // YOUR TURN: Rank each group from first to last place.
         // Decide what "fair" means before you start writing code!
+        
+        
+        // Set up variables to add up the top 7 students of each class
         int a = 0, b = 0, c = 0, d = 0;
         for (int i = 0; i < 4; i++)
         {
@@ -78,6 +81,8 @@ public class Program
             }
         }
 
+        // Set up final and "positioning" arrays and sort values by least to greatest, then do the same for the class letters
+        
         int[] rankVal = { a, b, c, d };
         int[] itemp = { a, b, c, d };
         string[] classes = { "Class A", "Class B", "Class C", "Class D" };
@@ -92,7 +97,7 @@ public class Program
             }
             
         }
-
+        // Print formatted ranking list
         Console.WriteLine("\n\n      - CLASS RANKINGS - ");
         for (int i = 0; i < 4; i++)
         {
